@@ -1,0 +1,8 @@
+classes= 13
+train  = task/deepfashion2/train.txt
+valid =  task/deepfashion2/test.txt
+names =  task/deepfashion2/task.names
+backup = task/deepfashion2/backup
+
+eval=coco
+
