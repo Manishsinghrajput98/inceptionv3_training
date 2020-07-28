@@ -16,8 +16,8 @@ args = vars(ap.parse_args())
 
 image = args["input"]
 
-classification_label = [line.rstrip() for line in tf.gfile.GFile('trained_labels.txt')]
-with tf.gfile.FastGFile('trained_graph.pb', 'rb') as f:
+classification_label = [line.rstrip() for line in tf.gfile.GFile('logs/trained_labels.txt')]
+with tf.gfile.FastGFile('logs/trained_graph.pb', 'rb') as f:
     graph_def = tf.GraphDef()
     graph_def.ParseFromString(f.read())
     _ = tf.import_graph_def(graph_def, name='')
